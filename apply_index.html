@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- SMTPJS library -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!--Our CSS-->
+    <link rel="stylesheet" href="apply_style.css">
+
+    <title>Apply To Climax Computer Institute</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row justify-content-center " style="margin-top: 20px;">
+                <div class="col-auto">
+                    <nav class="nav nav-pills">
+                        <a class="btn btn-primary btn-lg" href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    </nav>
+                </div>
+                <div class="col-auto app">
+                    APPLY ONLINE
+                </div>
+            </div>
+        </div>
+        <div class="w-100" style="margin: 10px;"></div>
+        <!--seperator-->
+        <div class="row justify-content-center name">
+            <p><span style="position: relative; bottom: 0.5rem;font-size: 0.8rem;"><i
+                        class="fas fa-star"></i></span>Climax Computer Institute</p>&nbsp;
+            <p>Application Form</p>
+        </div>
+    </header>
+    <aside class="container-fluid">
+        <div class="row justify-content-left">
+            <div class="col-auto">
+                <p>Note: You Can Also Take Admission Offline By Downloading Admission Form, Print It Out, Filling
+                    Properly And Submitting It in The Desired Branch.
+                    <a class="btn btn-sm btn-primary" href="New Admission Form.pdf" target="_blank"><i
+                            class="fas fa-download"></i>&nbsp;Download Form</a>
+                </p>
+            </div>
+        </div>
+    </aside>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert" style="display: none;">
+        <!--alert-->
+        <strong>Application Submitted Successfully.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="w-100" style="margin: 10px;"></div>
+    <!--seperator-->
+    <div class="container" style="display: none;border: grey 2px solid;border-radius: 5px;" id="final">
+        <div class="row justify-content-center">
+            <div class="col col-auto" style="text-align: center;">
+                Application Date => <span id="appDate"></span><br>
+                Candidate's Name => <span id="appName"></span> <br>
+                Application Number => <span id="appNo"></span> <br> <br>
+                Take A ScreenShot Or Copy Admission No, As It Will Be Required At The Time Of Admission.
+            </div>
+        </div>
+    </div>
+    <main class="container-fluid" style="display: block;" id="main">
+        <form action="javascript:action()" method="post">
+            <div class="row justify-content-left">
+                <div class=" col">
+                    <label for="course">Choose Your Course:</label>
+                    <select name="course" class="sel" required id="course">
+                        <option value="BASIC">BASIC</option>
+                        <option value="BASIC + Tally">BASIC + Tally 9.0</option>
+                        <option value="DCA">DCA</option>
+                        <option value="ADCA">ADCA</option>
+                        <option value="ADRA">ADRA</option>
+                        <option value="Hardware & Networking">Hardware & Networking</option>
+                        <option value="3DS MAX">3DS MAX</option>
+                        <option value="REVIT">REVIT</option>
+                        <option value="Mannual Drafting">Mannual Drafting</option>
+                        <option value="TALLY ERP 9">Tally ERP 9</option>
+                        <option value="DTP">DTP</option>
+                        <option value="Auto CAD">Auto CAD</option>
+                        <option value="Estimate & Costing">Estimate & Costing</option>
+                        <option value="Internet & Emails">Internet & Emails</option>
+                        <option value="MS-Office">MS-Office</option>
+                        <option value="advanced excel">Advanced Excel</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="name">Name Of Student:&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" maxlength="128" minlength="3" id="name" name="name" required
+                        autocomplete="given-name" autofocus>
+                </div>
+                <div class="col">
+                    <label for="father">Father's Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" maxlength="128" minlength="3" id="father" name="father" required>
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class=" col ">
+                    <label for="mother">Mother's Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" maxlength="128" minlength="3" name="mother" id="mother" required>
+                </div>
+                <div class="col ">
+                    <label
+                        for="ocuup">Occupation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input name="occup" type="text" maxlength="128" minlength="3" id="occup" required>
+                </div>
+                <div class="col ">
+                    <label for="dob">Date Of Birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="date" required autocomplete="bday" class="sel" id="dob">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <label
+                        for="cast">Cast:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="cast" maxlength="128" minlength="3" required id="cast">
+                </div>
+                <div class="col">
+                    <label for="adhar">Adhar Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="tel" name="adhar" required id="adhar">
+                </div>
+                <div class="col">
+                    <label
+                        for="gender">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                    </label>
+                    <select name="gender" class="sel" required autocomplete="sex" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="col">
+                    <label for="add">Village & Post:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="add" maxlength="1024" minlength="3" required id="add"
+                        autocomplete="address-level1">
+                </div>
+                <div class="col">
+                    <label
+                        for="dist">District:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                    </label>
+                    <input type="text" name="dist" maxlength="128" minlength="3" required id="dist">
+                </div>
+                <div class="col">
+                    <label for="state">State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="state" maxlength="128" minlength="3" required id="state">
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="col">
+                    <label
+                        for="pin">PIN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="pin" maxlength="6" minlength="6" required id="pin">
+                </div>
+                <div class="col">
+                    <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="email" name="email" maxlength="128" minlength="3" autocomplete="email" required
+                        autocomplete="email" id="email">
+                </div>
+                <div class="col">
+                    <label for="phone">Mobile No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="tel" name="phone" required autocomplete="mobile" id="phone">
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="col">
+                    <label for="phone2">Mobile No (Opt):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="tel" name="phone2" id="phone2">
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="col-auto">
+                    By Clicking 'Submit' I agree To The <a href="" onclick="showPolicy()">Terms & privacy policy</a> Of
+                    Climax Computer Institute.
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button type="reset" class="btn btn-sm  btn-danger"><i class="fas fa-undo"></i>&nbsp;RESET</button>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-paper-plane"
+                            aria-hidden="true"></i>&nbsp;SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer style="margin-top: 20px;">
+        <center>
+            Posting Any Abusive Content Is Probhited <br />
+            &copy;Climax Computer Institute,salaiya<br />
+            Developed By &copy;Md Sharique<br />
+            <a href="mailto:sharique15678@gmail.com">Contact Developer</a>
+        </center>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!--Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <!--our JS-->
+    <script src="apply_script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

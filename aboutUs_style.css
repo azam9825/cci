@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(255, 231, 95);
+    font-family: roboto;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html ,body{
+    margin: 0%;
+    padding: 0%;
+}
+.head-text{
+    color:rgb(142, 23, 23);;
+    text-align: center;
+}
+#welcome{
+    color: rgb(66,139,202);
+    font-size: 1.5rem;
+}
+#jumbo{
+  color: rgb(142, 23, 23);;
+  background-image: url(jumbo_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+}
+#name{
+    font-size: x-large;
+    color: rgb(142, 23, 23);;
+}
+.text{
+    margin-right:15px;
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:0;
+}
+.abt-dev{
+    font-size: larger;
+    font-family: monospace;
+}
