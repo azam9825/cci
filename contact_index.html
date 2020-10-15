@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Our jquery CDN 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- SMTPJS library -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+    <!--Our Own CSS-->
+    <link rel="stylesheet" href="contact_style.css">
+    <!--Our JS-->
+    <script src="contact_script.js"></script>
+
+    <title>Contact US-Climax Computer Institute</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <nav class="nav nav-pills">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    </nav>
+                </div>
+                <div class="col-auto cont">
+                    CONTACT US
+                </div>
+            </div>
+        </div>
+        <div class="w-100" style="margin: 10px;"></div>
+    </header>
+    <main class="container-fluid">
+        <!--Adress-->
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-12 head"><strong>ADRESSES</strong></div>
+                <div class="col-auto">
+                    <i class="fas fa-address-book"></i> <strong> Salaiya Branch <span
+                            class="badge badge-info">NEW</span> </strong><br />
+                    <address>
+                        <strong>Climax Computer Institute</strong> <br />
+                        Near Middle School, Main Road <br />
+                        Vill : Salaiya, Salaiya Bazar <br />
+                        Post : Kothi <br />
+                        P.S : Suhail <br />
+                        Block : Imamganj <br>
+                        Distt : Gaya <br>
+                        State : Bihar (India) <br>
+                        PIN: 824210
+                    </address>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-address-book"></i> <strong> Kothi Branch</strong> <br />
+                    <address>
+                        <strong>Climax Computer Institute</strong> <br />
+                        Near Post Office <br />
+                        Vill : Kothi, Kothi Bazar <br />
+                        Post : Kothi <br />
+                        P.S : Kothi <br />
+                        Block : Imamganj <br>
+                        Distt : Gaya <br>
+                        State : Bihar (India) <br>
+                        PIN : 824210
+                    </address>
+                </div>
+            </div>
+        </section>
+        <!--PHone NUMbers-->
+        <div class="col-12 head"><strong>Call Us On</strong></div>
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    Phone . +91 6202309825 &nbsp;&nbsp;<a href="tel:+916202309825" class="btn btn-primary btn-sm">
+                        <i class="fas fa-paper-plane"></i> CALL NOW</a>
+                </div>
+            </div>
+        </section>
+        <!--Email-->
+        <section>
+            <br>
+            <div class="col-12 head"><strong>E-Mail Us</strong></div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <i class="fas fa-envelope" style="margin-left: 10px;"></i> Email : climaxcomputerinstitute@gmail.com
+                    <a href="mailto:sikandar.azam9825@gmail.com" class="btn btn-primary btn-sm"
+                        style="margin-left: 10px;">
+                        <i class="fas fa-paper-plane"></i> EMAIL NOW</a>
+                </div>
+            </div>
+        </section>
+        <!--Query Form-->
+        <section>
+            <br>
+            <div class="col-12 head"><strong>Query Form</strong></div>
+            <div class="row justify-content-center">
+                <form action="javascript:sendMail()" method="POST">
+                    <label for="email">
+                        Email :&nbsp;&nbsp;&nbsp;<input type="email" required name="email"
+                            placeholder="example@sample.com" id="email">
+                    </label><br>
+                    <label for="mobile">
+                        mobile : &nbsp;<input type="tel" name="mobile" placeholder="+91 XXXXXXXXXX" required
+                            id="mobile">
+                    </label><br>
+                    <label for="sub">
+                        Subject : <input type="text" name="sub" placeholder="Your Subject Here" id="subject">
+                    </label><br>
+                    Messege : <br>
+                    <textarea name="body" cols="29" rows="5" placeholder="Put Your Messege Here" required
+                        id="body"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-sm btn-block" id="submit"><i
+                            class="fas fa-paper-plane"></i>&nbsp;&nbsp;SUBMIT</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br>
+    <br>
+    <footer>
+        <center>
+            &copy;Climax Computer Institute,salaiya<br />
+            Developed By &copy;Md Sharique<br />
+            <a href="mailto:sharique15678@gmail.com">Contact Developer</a>
+        </center>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

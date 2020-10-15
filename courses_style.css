@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(255, 231, 95);
+    font-family: roboto;
+}
+.heading{
+    color: maroon;
+    text-align: center;
+}
+.head-text{
+    color: rgb(179, 49, 19);
+font-size: xx-large;
+margin: 15px auto;
+text-align: center;
+text-decoration: underline;
+}
+ .head-name{
+     font-size: larger;
+     color: rgb(179, 49, 19);
+ }
+ #jumbo{
+     background-image: url(jumbo_bg2.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+ footer{
+     margin-top: 30px;
+ }
+ .jumbo-text{
+     font-size: 2rem;
+     font-family: cursive;
+ }

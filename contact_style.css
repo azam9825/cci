@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    font-family: roboto;
+    background-color: rgb(255, 231, 95); 
+}
+.cont{
+    font-size: x-large;
+    color: rgb(142, 23, 23);;
+    text-decoration: underline;
+
+}
+.head{
+    text-align: center;
+    font-size: larger;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-bottom: solid 3px blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+input:focus{
+    border: black 1px solid;
+    border-bottom: solid 3px green;
+}
+textarea{
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid blue;
+    margin: 5px;
+    padding: 5px;
+}
+textarea:focus{
+    border: solid 2px green;
+}
