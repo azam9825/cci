@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    background-color: rgb(255, 231, 95); 
+}
+.title{
+    font-size: xx-large;
+    color: rgb(142, 23, 23);
+    text-decoration: underline;
+    font-weight: 500;
+}
+header{
+    margin-top: 20px;
+}
+.name{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+    color: rgb(66,139,202);
+}
+.image{
+    padding: 5px;
+    margin: 10px;
+    border: maroon 2px dotted;
+    border-radius: 10px;
+}
+img{
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+}
