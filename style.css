@@ -1,12 +1,37 @@
-@media screen and (min-width: 500px){
-    #inst {
-        font-size: 10vw;
+@media screen and (max-device-width: 580px) {
+#climax{
+    font-size: 4rem !important;
+}
+#inst{
+    font-size: 2rem !important;
+}
+#logo{
+    height: 250px !important;
+    width: 250px !important;
+}
+#star{
+    position: relative !important;
+     bottom: 2rem !important;
+     font-size: large !important;
+}
+#tm{
+    top: 15px !important;
+    left: 195px !important;
+}
+.dir-img{
+    width: 10rem !important;
+    height: 10rem !important;
+}
+}
+@media screen and (max-device-width: 600px){
+    .cr-img{
+        max-width: 100% !important;
     }
 }
+
 * {
     box-sizing: border-box;
 }
-
 html,
 body {
     margin: 0;
@@ -19,14 +44,23 @@ body {
     background-image: url(logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius: 20px;
     padding: 0;
     margin: 0 auto;
     position: relative;
 }
-
+#tm{
+    text-align: center;
+    color: rgb(142,23,23);
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    font-size: x-large;
+    font-family: calibri;
+    font-weight: 1000;
+}
 .jumbotron {
     margin: 0 auto;
     margin-top: 20px;
@@ -44,12 +78,16 @@ body {
 }
 
 #climax {
-        font-size: 4rem;
+        font-size: 8rem;
         line-height: 0.8;
-        font-weight: 900;
+}
+#star{
+    position: relative;
+    bottom: 4.5rem;
+    font-size: x-large;  
 }
 #inst {
-        font-size: 2rem;
+        font-size: 4rem;
         line-height: 0.8;
 }
 #org {
@@ -59,8 +97,8 @@ body {
         font-size: x-large;
 }
 .dir-img{
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
     background-image: url(card.png);
     background-repeat: no-repeat;
     background-size: cover;
