@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <!--Required  meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,6 +22,28 @@
 </head>
 
 <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Terms Conditions & Privacy Policy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    1.Institute Has Full Right Of Rejecting Any Application. <br>
+                    2.We Never Share Your Data With Anyone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">I understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="container-fluid">
             <div class="row justify-content-center " style="margin-top: 20px;">
@@ -78,7 +100,8 @@
             <div class="row justify-content-left">
                 <div class=" col">
                     <label for="course">Choose Your Course:</label>
-                    <select name="course" class="sel" required id="course">
+                    <select name="course" class="sel" id="course" required autofocus>
+                        <option value="None">Please Select</option>
                         <option value="BASIC">BASIC</option>
                         <option value="BASIC + Tally">BASIC + Tally 9.0</option>
                         <option value="DCA">DCA</option>
@@ -99,8 +122,8 @@
                 </div>
                 <div class="col">
                     <label for="name">Name Of Student:&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" maxlength="128" minlength="3" id="name" name="name" required
-                        autocomplete="given-name" autofocus>
+                    <input type="text" maxlength="128" minlength="3" id="name" name="name" autocomplete="given-name"
+                        required>
                 </div>
                 <div class="col">
                     <label for="father">Father's Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -119,7 +142,7 @@
                 </div>
                 <div class="col ">
                     <label for="dob">Date Of Birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="date" required autocomplete="bday" class="sel" id="dob">
+                    <input type="date" autocomplete="bday" class="sel" id="dob" required>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -127,18 +150,18 @@
                     <label
                         for="cast">Cast:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" name="cast" maxlength="128" minlength="3" required id="cast">
+                    <input type="text" name="cast" maxlength="128" minlength="3" id="cast" required>
                 </div>
                 <div class="col">
                     <label for="adhar">Adhar Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="tel" name="adhar" required id="adhar">
+                    <input type="tel" name="adhar" id="adhar" required>
                 </div>
                 <div class="col">
                     <label
                         for="gender">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;
                     </label>
-                    <select name="gender" class="sel" required autocomplete="sex" id="gender">
+                    <select name="gender" class="sel" autocomplete="sex" id="gender" required>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
@@ -148,20 +171,22 @@
             <div class="row justify-content-left">
                 <div class="col">
                     <label for="add">Village & Post:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" name="add" maxlength="1024" minlength="3" required id="add"
-                        autocomplete="address-level1">
+                    <input type="text" name="add" maxlength="1024" minlength="3" id="add" autocomplete="address-level1"
+                        required>
                 </div>
                 <div class="col">
                     <label
                         for="dist">District:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;
                     </label>
-                    <input type="text" name="dist" maxlength="128" minlength="3" required id="dist">
+                    <input type="text" name="dist" maxlength="128" minlength="3" id="dist" required
+                        autocomplete="address-level2">
                 </div>
                 <div class="col">
                     <label for="state">State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="text" name="state" maxlength="128" minlength="3" required id="state">
+                    <input type="text" name="state" maxlength="128" minlength="3" id="state" required
+                        autocomplete="address-level3">
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -169,29 +194,58 @@
                     <label
                         for="pin">PIN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="number" name="pin" maxlength="6" minlength="6" required id="pin">
+                    <input type="number" name="pin" maxlength="6" minlength="6" id="pin" required>
                 </div>
                 <div class="col">
                     <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="email" name="email" maxlength="128" minlength="3" autocomplete="email" required
-                        autocomplete="email" id="email">
+                    <input type="email" name="email" maxlength="128" minlength="3" autocomplete="email"
+                        autocomplete="email" id="email" required>
                 </div>
                 <div class="col">
                     <label for="phone">Mobile No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="tel" name="phone" required autocomplete="mobile" id="phone">
+                    <input type="tel" name="phone" autocomplete="mobile" id="phone" required>
                 </div>
             </div>
             <div class="row justify-content-left">
                 <div class="col">
-                    <label for="phone2">Mobile No (Opt):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label for="phone2">2nd Mobile No*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input type="tel" name="phone2" id="phone2">
+                </div>
+                <div class="col">
+                    <label
+                        for="image">Photo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="file" name="image" id="image" accept="image/jpeg,image/jpg" required>
+                </div>
+                <div class="col">
+                    <label for="adhar-copy">Adhar Card:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="file" name="adhar-copy" id="adhar-copy" accept="image/jpeg,image/jpg" required>
                 </div>
             </div>
             <div class="row justify-content-left">
+                <div class="col">
+                    <label for="matric">10<sup>th</sup>
+                        MarksSheet:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="file" name="matric" id="matric" accept="image/jpeg,image/jpg" required>
+                </div>
+                <div class="col">
+                    <label for="inter">12<sup>th</sup>
+                        MarksSheet:*&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="file" name="inter" id="inter" accept="image/jpeg,image/jpg">
+                </div>
+                <div class="col">
+                    <label for="diploma" title="Dilpma Certificate">Diploma
+                        Cert :*</label>
+                    <input type="file" name="diploma" id="diploma" accept="image/jpeg,image/jpg">
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="w-100" style="margin: 10px;"></div>
                 <div class="col-auto">
-                    By Clicking 'Submit' I agree To The <a href="" onclick="showPolicy()">Terms & privacy policy</a> Of
+                    Fields Marked By '*' Are Optional. <br>
+                    By Clicking 'Submit' I agree To The <a href="" data-toggle="modal"
+                        data-target="#staticBackdrop">Terms & privacy policy</a> Of
                     Climax Computer Institute.
                 </div>
             </div>
@@ -216,9 +270,10 @@
     </footer>
     <!-- Optional JavaScript -->
     <!--Firebase JS -->
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
     <!--our JS-->
     <script src="apply_script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
