@@ -15,6 +15,9 @@ function sendMail() {
         Subject: subject,
         Body: body,
     }).then(
-        message => alert("Submitted successfully!")
+        function () {
+            alert("submitted");
+            window.location.reload();
+        }
     );
 }
