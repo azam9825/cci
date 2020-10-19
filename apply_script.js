@@ -17,6 +17,11 @@ var email = " null";
 var phone = " null";
 var phone2 = "null";
 var userId = null;
+var photoUrl = "none";
+var adharUrl = "none";
+var matricUrl = "none";
+var interUrl = "none";
+var diplomaUrl = "none";
 // this web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAsQrWVk88FhJqWJQSdpQMzHjy0CnycrFk",
@@ -30,6 +35,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
+var storage = firebase.storage();//get a reference to storage
 function action() {
     course = document.getElementById("course").options[(document.getElementById("course")).selectedIndex].value;
     name = document.getElementById("name").value;
@@ -53,13 +59,20 @@ function action() {
         alert("Error in Authorisation\n" + errorMessage);
     });
     updateDataBase();
+    uploadFiles();
     sendMail();
+    /*  db.ref("/applications/" + userId).update({
+          Photo_link: photoUrl,
+          Adhar_link: adharUrl,
+          Matric_marksheet_link: matricUrl,
+          Inter_marksheet_link: interUrl,
+          Diploma_certificate_link: diplomaUrl
+      }); */
     document.getElementById("main").style.display = "none";
     document.getElementById("appDate").innerHTML = currentDate;
     document.getElementById("appName").innerHTML = name;
-    document.getElementById("appNo").innerHTML = userId;
+    document.getElementById("appNo").innerHTML = userId.substring(1);
     document.getElementById("final").style.display = "block";
-
 }
 function updateDataBase() {
     //id was added
@@ -90,8 +103,8 @@ function updateDataBase() {
 }
 //we are using SMTPJS for sending form data to an email 
 function sendMail() {
-    var body = "Application Date & time- " + currentDate + "<br/>" +
-        "application Id => " + userId + "<br/>" +
+    var body = "Application Date & time => " + currentDate.toDateString() + "<br/>" +
+        "application Id => " + userId.substring(1) + "<br/>" +
         "senders name => " + name + "<br/>" +
         "senders email => " + email + "<br/>" +
         "senders mobile number => " + phone + "<br/>" +
@@ -116,11 +129,84 @@ function sendMail() {
         From: email,
         Subject: "Application For Admission",
         Body: body,
+        /*Attachments: [
+            {
+                name: "Photo.jpg",
+                path: photoUrl
+            }, {
+                name: "Adhar_copy.jpg",
+                path: adharUrl
+            }, {
+                name: "10th_markssheet.jpg",
+                path: matricUrl
+            }, {
+                name: "12th_marksheet.jpg",
+                path: interUrl
+            }, {
+                name: "diploma_certificate.jpg",
+                path: diplomaUrl
+            }]*/
     }).then(
         message => document.getElementById("alert").style.display = "block"
     );
 }
-function showPolicy() {
-    alert("1.Institute Has Full Right Of Rejecting Any Application.\n2.We Never Share Your Data With Anyone.");
-    return;
+function uploadFiles() {
+    var storageRef = storage.ref();
+    var filesRef = storageRef.child('files');
+    var userRef = filesRef.child(userId.substring(1));
+    var photoRef = userRef.child("photo.jpg");
+    var file1 = document.getElementById("image").files[0];
+    var adharRef = userRef.child("adhar.jpg");
+    var file2 = document.getElementById("adhar-copy").files[0];
+    var matricRef = userRef.child("10th_marksheet.jpg");
+    var file3 = document.getElementById("matric").files[0];
+    photoRef.put(file1).then(function (data) {
+        photoRef.getDownloadURL().then(function (url) {
+            photoUrl = String(url);
+            console.log(photoUrl);
+        }).catch(function (error) {
+            console.log("An Error Occured.\n" + error.message);
+        });
+    });
+    adharRef.put(file2).then(function (data) {
+        adharRef.getDownloadURL().then(function (url) {
+            adharUrl = String(url);
+            console.log(adharUrl);
+        }).catch(function (error) {
+            console.log("An Error Occured.\n" + error.message);
+        });
+    });
+    matricRef.put(file3).then(function (data) {
+        matricRef.getDownloadURL().then(function (url) {
+            matricUrl = String(url);
+            console.log(matricUrl);
+        }).catch(function (error) {
+            console.log("An Error Occured.\n" + error.message);
+        });
+    });
+    //time for some optional documents
+    if (document.getElementById('inter').files.length != 0) {
+        var interRef = userRef.child("12th_marksheeet.jpg");
+        var file4 = document.getElementById("inter").files[0];
+        interRef.put(file4).then(function (data) {
+            interRef.getDownloadURL().then(function (url) {
+                interUrl = String(url);
+                console.log(interUrl);
+            }).catch(function (error) {
+                console.log("An Error Occured.\n" + error.message);
+            });
+        });
+    }
+    if (document.getElementById('diploma').files.length != 0) {
+        var diplomaRef = userRef.child("diploma_certificate.jpg");
+        var file5 = document.getElementById("diploma").files[0];
+        diplomaRef.put(file5).then(function (data) {
+            diplomaRef.getDownloadURL().then(function (url) {
+                diplomaUrl = String(url);
+                console.log(diplomaUrl);
+            }).catch(function (error) {
+                console.log("An Error Occured.\n" + error.message);
+            });
+        });
+    }
 }
