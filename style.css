@@ -98,8 +98,8 @@ body {
         font-size: x-large;
 }
 .dir-img{
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     background-image: url(card.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,5 +115,6 @@ margin: 0 auto;
 .dir-msg{
     font-size: larger;
     font-family: Georgia, serif;
+text-align: left ;
     break-word : break-all;
 }
