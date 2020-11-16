@@ -38,6 +38,7 @@ body {
     padding: 0;
     font-family: roboto;
     background-color: rgb(255, 231, 95);
+-webkit-text-stroke: 1px black;
 }
 
 #logo {
