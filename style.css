@@ -21,7 +21,7 @@
 .dir-img{
     width: 10rem !important;
     height: 10rem !important;
-margin: 0 auto;
+margin: 0 auto !important;
 }
 }
 @media screen and (max-device-width: 600px){
@@ -39,7 +39,6 @@ body {
     padding: 0;
     font-family: roboto;
     background-color: rgb(255, 231, 95);
--webkit-text-stroke: 1px black;
 }
 
 #logo {
