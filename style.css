@@ -21,6 +21,7 @@
 .dir-img{
     width: 10rem !important;
     height: 10rem !important;
+margin: 0 auto;
 }
 }
 @media screen and (max-device-width: 600px){
@@ -104,6 +105,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+margin: 0 auto;
 }
 #dir{
     font-size: x-large;
