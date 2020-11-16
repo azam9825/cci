@@ -116,6 +116,5 @@ margin: 0 auto;
 .dir-msg{
     font-size: larger;
     font-family: Georgia, serif;
-    word-wrap: break-word;
-    -ms-word-wrap: break-word;
+    text-align : justify;
 }
