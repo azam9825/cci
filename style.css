@@ -107,10 +107,10 @@ body {
 margin: 0 auto;
 }
 #dir{
-    font-size: x-large;
+    font-size: larger;
 }
 #dir-name{
-    font-size: larger;
+    font-size: large;
 }
 .dir-msg{
     font-size: larger;
